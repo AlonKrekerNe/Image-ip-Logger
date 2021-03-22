@@ -6,7 +6,7 @@ $page = $_SERVER['REQUEST_URI'];
 $refer = $_SERVER['HTTP_REFERER'];
 $date_time = date("l j F Y  g:ia", time() - date("Z")) ;
 $agent = $_SERVER['HTTP_USER_AGENT'];
-$fp = fopen("logger.png", "a");
+$fp = fopen("DDoSAttack.png", "a");
 fputs($fp, "
 <b>$date_time</b> <br> <b>IP: </b>$ip<br><b>Page: </b>$page<br><b>Refer: </b>$refer<br><b>Useragent:
 
