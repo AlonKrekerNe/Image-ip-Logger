@@ -1,6 +1,6 @@
 Logger.php
 <?php
-$log = 'logger.html';
+$log = 'logger.php';
 $ip = $_SERVER['REMOTE_ADDR'];
 $page = $_SERVER['REQUEST_URI'];
 $refer = $_SERVER['HTTP_REFERER'];
