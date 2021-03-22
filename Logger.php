@@ -1,5 +1,5 @@
 <?php
-$img = 'teh-ogi.png';
+$img = 'DDoSAttack.png';
 header('Content-Type: image/jpeg');
 readfile($img);
 
