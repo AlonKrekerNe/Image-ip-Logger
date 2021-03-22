@@ -1,25 +1,10 @@
-Logger.php
 <?php
-$log = 'logger.php';
-$ip = $_SERVER['REMOTE_ADDR'];
-$page = $_SERVER['REQUEST_URI'];
-$refer = $_SERVER['HTTP_REFERER'];
-$date_time = date("l j F Y  g:ia", time() - date("Z")) ;
-$agent = $_SERVER['HTTP_USER_AGENT'];
-$fp = fopen("DDoSAttack.png", "a");
-fputs($fp, "
-<b>$date_time</b> <br> <b>IP: </b>$ip<br><b>Page: </b>$page<br><b>Refer: </b>$refer<br><b>Useragent:
+$img = 'teh-ogi.png';
+header('Content-Type: image/jpeg');
+readfile($img);
 
-</b>$agent <br><br>
-");
-flock($fp, 3);
-fclose($fp);
-
-header( "Content-type: image/png" );
-imagepng( $my_img );
-imagecolordeallocate( $line_color );
-imagecolordeallocate( $text_color );
-imagecolordeallocate( $background );
-imagedestroy( $my_img );
-
+$file = fopen("ip.txt","a");
+$ip=$_SERVER['REMOTE_ADDR'];
+echo fwrite($file,$ip);
+fclose($file);
 ?>
